@@ -27,7 +27,7 @@ class ReviewAdmin (SummernoteModelAdmin):
 
 @admin.register(Game)
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'genre', 'year', 'platform', 'rating')
-    search_fields = ['title', 'game', 'gerne', 'year', 'platform', 'rating']
+    list_display = ('title', 'slug', 'genre', 'year', 'platform',)
+    search_fields = ['title', 'game', 'gerne', 'year', 'platform',]
     prepopulated_fields = {'slug': ('title',)}
  #   list_filter = ('created_on',)
