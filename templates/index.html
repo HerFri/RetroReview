@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="container-fluid">
+    <p class="brand black-font">Welcome to RetroReview, your Go-To site for Retro Videogame information and reviews! <br> 
+        Pick a game you want to view or write a review about
+    </p>
 <div class="container-fluid">
     <div class="row">
 
@@ -24,11 +27,11 @@
                             <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
                             </div>
                             <div>
-                                <a href="{% url 'game_detail' game.slug %}" class="post-link">   <!-- add game.id? -->
+                                <a href="{% url 'game_detail' game.slug %}" class="game-link">   <!-- add game.id? -->
                                     <h2 class ="card-title">{{ game.title }}</h2>
                                     <p class="card-text">{{ game.genre }}</p> 
                                     <p class="card-text">{{ game.developer }}</p> <!-- to be edited! -->
-                                    <p class="card-text text-muted h6">{{ game.year }}</p>
+                                    <p class="card-text h6">{{ game.year }}</p>
                                 </a>
                             <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
                             </div> 
