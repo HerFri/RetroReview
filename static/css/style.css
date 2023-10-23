@@ -24,7 +24,7 @@ body {
     
 
 .card-img-top {         /* custom css rule */
-    max-width: 500px!important;
+    min-width: 300px!important;
     max-height: auto!important;
 }
 
@@ -55,15 +55,16 @@ body {
 
 .image-container {
     position: relative;
-    max-width: 20%;
+/*    max-width: 20%; */
 }
 
 .image-flash {
-    position: absolute;
+/*    position: absolute; */
     bottom: 5%;
     min-width: 30%;
     left: 20px;
     background-color: #f00303;
+    margin-bottom: 20px;
 }
 
 
