@@ -24,8 +24,8 @@ body {
     
 
 .card-img-top {         /* custom css rule */
-    min-width: 300px!important;
-    max-height: auto!important;
+    width: 389px!important;
+    height: 284px!important;
 }
 
 .col-red {
@@ -55,6 +55,7 @@ body {
 
 .image-container {
     position: relative;
+    
 /*    max-width: 20%; */
 }
 
