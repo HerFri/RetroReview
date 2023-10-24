@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Game, Review
-#from .forms import ReviewForm
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -57,7 +57,7 @@ class ReviewDetail(View):
         game = get_object_or_404(Game, slug=game)
         review = get_object_or_404(queryset, slug=review)
         #reviews = game.review_set.filter(status=1).order_by('-created_on') # Get all reviews related to the game
-        #comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
+        comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
         liked = False
         if review.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -69,8 +69,9 @@ class ReviewDetail(View):
             "review_detail.html",
             {
                 "review": review,
-            #    "comments": comments,
+                "comments": comments,
                 "liked": liked,
                 "game": game,
+                "comment_form": CommentForm(),
             }
         )
