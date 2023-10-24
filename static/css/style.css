@@ -26,6 +26,11 @@ body {
 .card-img-top {         /* custom css rule */
     width: 389px!important;
     height: 284px!important;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
 }
 
 .col-red {
@@ -188,3 +193,70 @@ body {
 /*.white-col {
     color: #ffffff;
 } */
+
+.navbar {
+    background-color: #000000;
+}
+
+@media only screen and (max-width: 150px) {
+    .card-img-top {         /* custom css rule */
+        width: 100px!important;
+        height: 75px!important;
+        object-fit: cover;
+    } 
+  }
+
+
+@media only screen and (max-width: 280px) {
+    .card-img-top {         /* custom css rule */
+        width: 200px!important;
+        height: 150px!important;
+        object-fit: cover;
+    }
+
+    #welcome {
+        font-size: 14px;
+    }    
+  }
+
+  @media only screen and (max-width: 470px) {
+    .card-img-top {         /* custom css rule */
+        width: 100%!important;
+        height: auto!important;
+        object-fit: fill;
+    }
+ 
+  }
+
+  @media only screen and (max-width: 767px) {
+    .card-img-top {         /* custom css rule */
+        width: 100%!important;
+        height: auto!important;
+
+    }
+ 
+  }
+
+/*  @media only screen and (max-width: 1365px) {
+    .card-img-top {         
+        width: 100%!important;
+        height: 100%!important;
+        object-fit: fill;
+    }
+  } */
+
+@media only screen and (max-width: 1365px) {
+    .card-img-top {         /* custom css rule */
+        width: 100%!important;
+        height: auto!important;
+        object-fit: fill;
+    }
+
+}
+
+@media only screen and (max-width: 3065px) {
+    .card-img-top {         /* custom css rule */
+        object-fit: fill;
+    }
+
+}
