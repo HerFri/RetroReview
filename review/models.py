@@ -55,17 +55,18 @@ class Review(models.Model):
         return f"Review {self.content} by {self.username}"
 
 
-#class Comment(models.Model):
-#   review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
-#    username = models.CharField(max_length=80)
-#    email = models.EmailField()
-#    body = models.TextField()
-#    created_on = models.DateTimeField(auto_now_add=True)
-#    approved = models.BooleanField(default=False)
-#    
-#    class Meta:
-#        ordering = ['-created_on']
-#
-#    def __str__(self):
-#        return f"Comment {self.body} by {self.username}"
+class Comment(models.Model):
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
+    username = models.ForeignKey(User, on_delete=models.CASCADE,)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.username}"
 
