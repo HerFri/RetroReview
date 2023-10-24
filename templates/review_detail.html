@@ -55,21 +55,28 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+            <h3 class="brand col-red outline">Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
+                <div class="border border-dark border-1 rounded" style="padding: 10px;">
+                    <p>
+                        <span class="brand col-red outline">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.username }}
-                        <span class=" text-muted font-weight-normal">
+                        {{ comment.name }}
+                        </span>
+                        <span class="whitespace"></span>
+                        wrote on 
+                        <span>
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- The body of the comment goes before the | -->
+                        </span>
+                        :
+                    </p> 
+                        <!-- The body of the comment goes before the | -->
+                    <span>
                     {{ comment.body | linebreaks }}
+                    </span>
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -78,16 +85,24 @@
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 <!-- For later -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h3 class="brand col-red outline">Leave<span class="whitespace"></span>a<span class="whitespace"></span>comment:</h3>
+                <p>Posting as: <p class="brand col-red outline">{{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </div>
                 </form>
-
+                {% endif %}
                 {% endif %}
             </div>
         </div>

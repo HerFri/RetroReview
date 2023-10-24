@@ -5,6 +5,7 @@
 
 body {
     background-color: #F9FAFC;
+    font-weight: 700;
 }
 
 .bg-red {
@@ -38,7 +39,7 @@ body {
 }
 
 .thin {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .light-bg {
@@ -155,7 +156,7 @@ body {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #f00303;
 }
 
 .link {

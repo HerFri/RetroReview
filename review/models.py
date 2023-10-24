@@ -57,7 +57,6 @@ class Review(models.Model):
 
 class Comment(models.Model):
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
-    username = models.ForeignKey(User, on_delete=models.CASCADE,)
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
