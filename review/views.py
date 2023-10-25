@@ -116,7 +116,7 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            return redirect('review_detail', slug=comment.review.slug)
+            return redirect('review_detail', game = comment.review.game.slug, review=comment.review.slug,)
     else:
         form = CommentForm(instance=comment)
 
@@ -124,7 +124,13 @@ def edit_comment(request, comment_id):
 
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
-    if request.method == 'POST':
-        comment.delete()
-        return redirect('review_detail', slug=comment.review.slug)
-    return render(request, 'delete_comment.html', {'comment': comment})
+    # Überprüfen, ob der Benutzer ein Administrator ist oder der Autor des Kommentars
+    if request.user.is_superuser or request.user == comment.name:
+        if request.method == 'POST':
+            # Löschlogik hier einfügen
+            comment.delete()
+            return redirect('review_detail', game = comment.review.game.slug, review=comment.review.slug,)
+        return render(request, 'delete_comment.html', {'comment': comment})
+    else:
+        # Hier können Sie eine Weiterleitung oder eine Fehlermeldung hinzufügen
+        return redirect('review_detail', review_id=comment.review.id)

@@ -7,7 +7,7 @@
     <form method="post">
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">Delete Comment</button>
-        <a href="{% url 'review_detail' comment.post.id %}" class="btn btn-secondary">Cancel</a>
+        <a href="{% url 'review_detail' comment.review.game.slug comment.review.slug%}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 {% endblock content %}
