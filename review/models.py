@@ -49,7 +49,7 @@ class Review(models.Model):
         return self.likes.count()
     
     def ordered_by_likes(self):
-        return self.likes.order_by('-likes')
+        return self.likes.order_by('-likes') # eingebaut in projekt?
 
     def __str__(self):
         return f"Review {self.content} by {self.username}"
