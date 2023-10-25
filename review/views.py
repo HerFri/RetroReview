@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
-from .models import Game, Review
+from .models import Game, Review, Comment
 from .forms import CommentForm
 
 # Create your views here.
@@ -109,3 +109,22 @@ class ReviewDetail(View):
                 "comment_form": CommentForm()
             }
         )
+    
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('review_detail', slug=comment.review.slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
+
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('review_detail', slug=comment.review.slug)
+    return render(request, 'delete_comment.html', {'comment': comment})
