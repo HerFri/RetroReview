@@ -8,6 +8,16 @@ body {
     font-weight: 700;
 }
 
+.footer {
+    background: rgb(252,249,249);
+    background: linear-gradient(180deg, rgba(252,249,249,1) 0%, rgba(240,3,3,1) 100%);
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
+
 .bg-red {
     background-color: #f00303;
 } 
@@ -124,6 +134,10 @@ body {
     z-index: 100;
 }
 
+.navbar {
+    background: rgb(252,249,249);
+    background: linear-gradient(0deg, rgba(252,249,249,1) 0%, rgba(240,3,3,1) 100%);
+}
 /* .nav-black {
     color:#000000;
 } */
@@ -195,9 +209,7 @@ body {
     color: #ffffff;
 } */
 
-.navbar {
-    background-color: #000000;
-}
+
 
 @media only screen and (max-width: 150px) {
     .card-img-top {         /* custom css rule */

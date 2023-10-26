@@ -33,40 +33,33 @@
                     {{ review.content | safe }}
                 </p>
                 <div class="row">
-
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'review_like' game.slug review.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                    
-                                <button type="submit" name="gamereview_id" value="{{review.slug}}" class="btn-like"><i
-                                    class="fas fa-thumbs-up"></i></button>
+                    <div>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'review_like' game.slug review.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
                                 
-                                {% else %}
-
-                                <button type="submit" name="gamereview_id" value="{{review.slug}}" class="btn-like"><i
-                                    class="far fa-thumbs-up"></i></button>
-
-                                {% endif %}
-                            </form>
+                            <button type="submit" name="gamereview_id" value="{{review.slug}}" class="btn-like"><i
+                                class="fas fa-thumbs-up"></i></button>
+                            
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+
+                            <button type="submit" name="gamereview_id" value="{{review.slug}}" class="btn-like"><i
+                                class="far fa-thumbs-up"></i></button>
+
                             {% endif %}
-                            <span class="text-secondary"> {{ review.number_of_likes }}</span>
-                        </strong>
-                        <!-- The number of likes goes before the closing strong tag -->
-                    <!-- <strong class="text-secondary"><i class="far fa-heart"></i> {{ review.number_of_likes }} </strong> -->
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}
-                        </strong>
-                        {% endwith %}
-                    </div>
+                        </form>
+                        {% else %}
+                        <span><i class="far fa-thumbs-up"></i></span>
+                        {% endif %}
+                        {% if review.number_of_likes > 1 %}
+                        <span> {{ review.number_of_likes }}<span> Users liked this review</span>
+                        {% else %}
+                        <span> {{ review.number_of_likes }}<span> User liked this review</span>
+                        {% endif %}
+                    <!-- The number of likes goes before the closing strong tag -->
+                <!-- <strong class="text-secondary"><i class="far fa-heart"></i> {{ review.number_of_likes }} </strong> -->
+                    </div>  
                 </div>
             </div>
         </div>
@@ -78,7 +71,16 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3 class="brand col-red outline">Comments:</h3>
+            <div class="align">
+                <h3 class="brand col-red outline">Comments</h3>
+                    {% with comments.count as total_comments %}
+                    <strong style="margin-left: 10px"><i class="far fa-comments"></i>
+                        <!-- Our total_comments variable goes before the closing strong tag -->
+                        {{ total_comments }}
+                    </strong>
+                    {% endwith %}
+            </div>
+            
             <div class="card-body">
                 <!-- We want a for loop inside the tags to iterate through each comment in comments -->
                 {% for comment in comments %}
