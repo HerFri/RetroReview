@@ -41,7 +41,7 @@
                                     <br>
                                     <br>
                                     <strong class="text-secondary"><i class="far fa-thumbs-up" style="color: red"></i> {{ review.number_of_likes }} </strong>
-                                    <strong class="text-secondary"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}</strong>
+                                    <strong class="text-secondary"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}<span>/5</span></strong>
                                 </div>
                                 <div>
                                     <a href="{% url 'review_detail' game.slug review.slug %}" class="game-link">   <!-- add game.id? -->
