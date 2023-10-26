@@ -92,6 +92,7 @@ class ReviewDetail(View):
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.review = review
+            comment.author = request.user
             comment.save()
         else:
             comment_form = CommentForm()
@@ -110,15 +111,16 @@ class ReviewDetail(View):
         )
 
 class ReviewLike(View):
-    def review(self, request, slug):
-        review = get_object_or_404(Review, slug=slug)
-        
-        if review.likes.filter(id=request.user.id).exists():
-            review.likes.remove(self.request.user)
-        else:
-            review.likes.add(request.user)
-        return HttpResponseRedirect(reverse('review_detail', args=[slug]))
-        #return redirect('review_detail', game=review.game.slug, review=review.slug)
+        def post(self, request, game, review):
+            review = get_object_or_404(Review, slug=review)
+            game= get_object_or_404(Game, slug=game)
+            
+            if review.likes.filter(id=request.user.id).exists():
+                review.likes.remove(self.request.user)
+            else:
+                review.likes.add(request.user)
+            return HttpResponseRedirect(reverse('review_detail', args=[game.slug, review.slug]))
+            #return redirect('review_detail', game=review.game.slug, review=review.slug)
 def edit_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.method == "POST":

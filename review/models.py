@@ -38,7 +38,7 @@ class Review(models.Model):
     #review_image = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='review_image') #CloudinaryField('image', default='placeholder') # Users can upload their own screenshots?
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0) 
-    likes = models.ManyToManyField(User, related_name='likes', blank=True)
+    likes = models.ManyToManyField(User, related_name='review_like', blank=True)
     rating = models.DecimalField(choices=STARS, max_digits=2, decimal_places=1) # ForeignKey?
     id = models.AutoField(primary_key=True, editable=False)    
     
@@ -57,6 +57,7 @@ class Review(models.Model):
 
 class Comment(models.Model):
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -67,5 +68,5 @@ class Comment(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"Comment {self.body} by {self.username}"
+        return f"Comment {self.body} by {self.author}"
 

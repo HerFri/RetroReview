@@ -99,9 +99,11 @@
                         <!-- The body of the comment goes before the | -->
                     <span>
                     {{ comment.body | linebreaks }}
-                    {% if user.is_authenticated and user == comment.name or user.is_superuser %}
-                        <a href="{% url 'edit_comment' comment.id %}" class="btn btn-primary">Edit</a>
+                    {% if user.is_authenticated %}
+                    {% if comment.author == user or user.is_superuser %}
+                        <a href="{% url 'edit_comment' comment.id %}" class="btn btn-success">Edit</a>
                         <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger">Delete</a>
+                    {% endif %}
                     {% endif %}
                     </span>
                 </div>
