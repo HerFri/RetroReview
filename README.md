@@ -1,39 +1,147 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# RetroReview
+Visit the live page [here]()
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+ 
+![mockup]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+The mockup image has been generated on [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+# User Experience
+## User Stories
+* As a user, I want 
 
-`python3 -m http.server`
+# Design
+## Colors
+For the color theme I chose 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![colorpalette]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The colorpalette above has been generated with [coolors.co]()
 
-`http_server`
+For the social network icons in the footer, these colors have been used:
+* Facebook: 
+* Instagram: 
+* YouTube: 
+## Fonts
+As for the fonts, I imported fonts, namely
+* 
+The 'Pretendo'-font is being used for 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Structure
+## Wireframes
+For the structural planning of my website, I created some wireframes using the wireframe software [Balsamiq](https://balsamiq.com/).
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Desktop wireframe of index page]()
+* [Desktop wireframe of  page]()
+* [Mobile view wireframe of index page]()
+* [Mobile view wireframe of ]()
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Features
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Navigation Bar
+The navigation bar is located under the hero image and allows by clicking on one of the navigation elements navigation to the desired section of the website. 
+![navbar1]()
 
----
+## Landing Page
+The Landing Page consists of 
+![landingpage]()
 
-Happy coding!
+
+## Footer
+The footer comprises four clickable icons for the social networks Facebook, Instagram, Twitter and YouTube. By clicking the icons, a new tab is opened which leads the user to the respective social network.
+The icon designs are imported from [Font Awesome](https://fontawesome.com/).
+
+![footer]()
+
+
+# Future features
+
+
+# Accessibility ?
+For good accessibility `<aria-label>` and `alt`-attributes have been added to elements like links and images that do not provide sufficient information to support assistive technologies like screenreaders.
+
+# Technologies Used
+Following technologies have been used for building my website:
+
+* HTML
+* CSS
+* Python
+* GitHub
+* GitHub Pages
+* Visual Studio Code
+
+# Testing
+## Code Validation
+The website has been tested with the W3C Validator and Jigsaw Validator 
+* The W3C Validator test passed with no errors. [Test here]()
+* The Jigsaw Validator test passed with no errors. [Test here]()
+
+## Performance Test
+To test the performance of the website the Google Lighthouse test was used and showed good results:
+![googlelighthouseresult]()
+
+## Responsiveness
+To test responsiveness, I used the website [AmIresponsive]() that generated the [mockup image]() and showed that my website was responsive on different devices.
+Moreover, I used Chrome (Version ) Developer Tools to simulate viewports of different devices, which showed that my website was fully responsive:
+![galaxyfoldvw]()
+![iphone6vw]()
+![ipadairvw]()
+
+## Browser Testing
+
+I tested the layout and appearance of my website for consistency on different browsers.
+Moreover, I tested if the navigation, all links, form submission and video works on different browser. 
+
+Tested browser: Chrome (Version 114.0.5735.199), Firefox, Safari, Edge
+
+Result: Layout and all functions work throughout the tested browsers.
+
+## Manual Testing
+
+| Feature         | Expect                                                          | Action                    | Result                                          |   
+|-----------------|-----------------------------------------------------------------|---------------------------|-------------------------------------------------|
+| 
+
+
+## Testing User Stories
+
+| Expectation                                                                                        | Result                                                                                                                                                                                                                                   |
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| As a user, I want                                                                                       |
+| As a user, I want | 
+
+## Fixed Bugs
+
+When an authenticated site user would click the like button on a review page, the browser would throw a HTTP ERROR 405.
+![bug]()
+
+The reason for this issue was that not sufficient arguments have been passed to and inside the
+`like`-function of the `ReviewLike`-class. More precisely, the `slug`-arguments were not correct and some were missing, so
+I added the correct arguments `slug=review`, `slug=game` and `args=[game.slug, review.slug]`.
+
+![fixclass]()
+![fixcode]()
+
+# Deployment
+
+# Credits
+
+## Contents
+
+
+## Media
+Images:
+[]()
+
+
+All media was used for educational purposes only.
+
+## Code 
+
+
+# Acknowledgements
+I want to thank the Slack community and the tutors of Code Institute for their very helpful support and valuable criticism!
