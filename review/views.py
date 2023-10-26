@@ -111,7 +111,7 @@ class ReviewDetail(View):
         )
 
 class ReviewLike(View):
-        def like(self, request, game, review):
+        def post(self, request, game, review):
             review = get_object_or_404(Review, slug=review)
             game= get_object_or_404(Game, slug=game)
             
