@@ -52,7 +52,7 @@
                         {% else %}
                         <span><i class="far fa-thumbs-up"></i></span>
                         {% endif %}
-                        {% if review.number_of_likes > 1 %}
+                        {% if review.number_of_likes == 0 or number_of_likes > 1 %}
                         <span> {{ review.number_of_likes }}<span> Users liked this review</span>
                         {% else %}
                         <span> {{ review.number_of_likes }}<span> User liked this review</span>
