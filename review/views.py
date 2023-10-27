@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Game, Review, Comment
-from .forms import CommentForm
+from .forms import CommentForm, GameFilterForm
+
 
 # Create your views here.
 
@@ -111,16 +112,16 @@ class ReviewDetail(View):
         )
 
 class ReviewLike(View):
-        def post(self, request, game, review):
-            review = get_object_or_404(Review, slug=review)
-            game= get_object_or_404(Game, slug=game)
-            
-            if review.likes.filter(id=request.user.id).exists():
-                review.likes.remove(self.request.user)
-            else:
-                review.likes.add(request.user)
-            return HttpResponseRedirect(reverse('review_detail', args=[game.slug, review.slug]))
-            #return redirect('review_detail', game=review.game.slug, review=review.slug)
+    def post(self, request, game, review):
+        review = get_object_or_404(Review, slug=review)
+        game= get_object_or_404(Game, slug=game)
+        
+        if review.likes.filter(id=request.user.id).exists():
+            review.likes.remove(self.request.user)
+        else:
+            review.likes.add(request.user)
+        return HttpResponseRedirect(reverse('review_detail', args=[game.slug, review.slug]))
+        #return redirect('review_detail', game=review.game.slug, review=review.slug)
 def edit_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
     if request.method == "POST":
@@ -145,3 +146,16 @@ def delete_comment(request, comment_id):
     else:
         # Hier können Sie eine Weiterleitung oder eine Fehlermeldung hinzufügen
         return redirect('review_detail', review_id=comment.review.id)
+    
+def filter_games(request):
+    games = Game.objects.all()  # Alle Beiträge
+    # Formular verarbeiten, um Filteroptionen zu erhalten
+    form = GameFilterForm(request.GET)
+    if form.is_valid():
+        platform = form.cleaned_data.get("platform")
+        year = form.cleaned_data.get("year")
+        if platform:
+            games = games.filter(platform=platform)
+        if year:
+            games = games.filter(year=year)
+    return render(request, "filtered_games.html", {"games": games, "form": form})

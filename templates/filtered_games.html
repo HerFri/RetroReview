@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <p id="welcome" class="brand black-font">Welcome to RetroReview, your Go-To site for Retro Videogame information and reviews! <br> 
+        Pick a game you want to view or write a review about
+    </p>
+<div class="container-fluid">
+    <h1 class="text-center mt-5">Filtered Posts</h1>
+        <div class="row">
+            <div class="col-12 mt-3 left">
+                {% if games %}
+                    <div class="row">
+                        {% for game in games %}
+                        <div class="col-md-4">
+                            <div class="card mb-4 border border-secondary">
+                                <div class="card-body">
+                                    <div class="image-container card-img-top">
+                                        {% if "placeholder" in game.featured_image.url %}
+                                            <img class="card-img-top" 
+                                                src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
+                                        {% else %}
+                                            <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
+                                        {% endif %}
+                                    </div>  
+                                    <div class="image-flash">                   
+                            <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
+                                    </div>
+                                    <div>
+                                        <a href="{% url 'game_detail' game.slug %}" class="game-link">   <!-- add game.id? -->
+                                            <h2 class ="card-title">{{ game.title }}</h2>
+                                            <p class="card-text thin">{{ game.genre }}</p> 
+                                            <p class="card-text">{{ game.developer }}</p> <!-- to be edited! -->
+                                            <p class="card-text h6">{{ game.year }}</p>
+                                        </a>
+                            <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
+                                    </div> 
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+{% endblock %}
