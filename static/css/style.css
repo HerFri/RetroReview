@@ -227,6 +227,10 @@ body {
         object-fit: cover;
     }
 
+    .footer {
+        font-size: 12px;
+    }
+
     #welcome {
         font-size: 14px;
     }    
@@ -271,7 +275,7 @@ body {
     .card-img-top {         /* custom css rule */
         object-fit: contain;
         width: auto;
-        max-height: 284px!important;;
+        max-height: 284px!important;
     }
 
 }

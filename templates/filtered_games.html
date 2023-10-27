@@ -6,7 +6,15 @@
         Pick a game you want to view or write a review about
     </p>
 <div class="container-fluid">
-    <h1 class="text-center mt-5">Filtered Posts</h1>
+    <div>
+    {% if form.year.value == "" and form.platform.value == "" %}
+        <h1 class="text-center mt-5">Search Results (All Games)</h1>
+    {% elif form.year.value == "" and form.platform.value != "" %}
+        <h1 class="text-center mt-5">Search Results for all games released for <span class="link">{{ form.platform.value }}</span></h1>
+    {% elif form.year.value != "" and form.platform.value == "" %}
+        <h1 class="text-center mt-5">Search Results for all games released in <span class="link">{{ form.year.value }}</span></h1>    
+    {% endif %}    
+    </div>
         <div class="row">
             <div class="col-12 mt-3 left">
                 {% if games %}
@@ -45,8 +53,10 @@
             {% endif %}
             {% endfor %}
             </div>
+             
         </div>
     </div>
+    
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -59,6 +69,7 @@
             {% endif %}
         </ul>
     </nav>
+    {% endif %}
     {% endif %}
 </div>
 

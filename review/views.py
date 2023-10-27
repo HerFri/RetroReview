@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django import forms
 from .models import Game, Review, Comment
 from .forms import CommentForm, GameFilterForm
+from .years import YEARS
+from .platforms import PLATFORMS
 
 
 # Create your views here.
@@ -134,6 +137,10 @@ def edit_comment(request, comment_id):
 
     return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
 
+class FilterForm(forms.Form):
+    year = forms.ChoiceField(choices=YEARS)
+
+
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
     # Überprüfen, ob der Benutzer ein Administrator ist oder der Autor des Kommentars
@@ -159,3 +166,11 @@ def filter_games(request):
         if year:
             games = games.filter(year=year)
     return render(request, "filtered_games.html", {"games": games, "form": form})
+
+#def filter_games(request):
+#    if request.method == "POST":
+#        year = request.POST.get('year')
+#        platform = request.POST.get('platform')
+#        games = Game.objects.filter(year=year, platform=platform)
+#        return render(request, 'filtered_games.html', {'games': games,})
+#    return render(request, 'index.html', {'years': YEARS, 'platforms': PLATFORMS})
