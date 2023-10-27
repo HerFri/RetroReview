@@ -9,5 +9,5 @@ urlpatterns = [
     path('like/<slug:game>/<slug:review>', views.ReviewLike.as_view(), name='review_like'),
     path('comment/edit/<int:comment_id>/', views.edit_comment, name='edit_comment'),
     path('comment/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
-    #path('filter/<slug:platform>/<slug:year>/', filter_games, name='filter_games'),
+    path('filter/', filter_games, name='filter_games'),
 ]                              
