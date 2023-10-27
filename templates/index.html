@@ -8,8 +8,8 @@
 <div class="row">
     <!-- ab hier filter_games-->
     <div class="text-center mt-5">
-        <div class="rof justify-content-center">
-        <form method="get" action="{% url 'filter_games' %}">
+        <div class="justify-content-center">
+        <form id="filterform" method="get" action="{% url 'filter_games' %}">
             <label for="id_platform">Platform:</label>
             <select id="id_platform" name="platform">
                 <option value="">Choose Platform</option>
@@ -88,9 +88,9 @@
                             <div>
                                 <a href="{% url 'game_detail' game.slug %}" class="game-link">   <!-- add game.id? -->
                                     <h2 class ="card-title">{{ game.title }}</h2>
-                                    <p class="card-text thin">{{ game.genre }}</p> 
-                                    <p class="card-text">{{ game.developer }}</p> <!-- to be edited! -->
-                                    <p class="card-text h6">{{ game.year }}</p>
+                                    <p class="card-text thin">Genre: {{ game.genre }}</p> 
+                                    <p class="card-text">Developer: {{ game.developer }}</p> <!-- to be edited! -->
+                                    <p class="card-text h6">Year of Release: {{ game.year }}</p>
                                 </a>
                             <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
                             </div> 

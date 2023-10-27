@@ -100,6 +100,7 @@ body {
 }
 
 
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -227,6 +228,20 @@ body {
         object-fit: cover;
     }
 
+    .topgame {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .post-title {
+        font-size: 16px;
+    }
+
+    .post-subtitle {
+        font-size: 12px;
+    }
+
     .footer {
         font-size: 12px;
     }
@@ -243,16 +258,41 @@ body {
         object-fit: fill;
     }
  
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-signup {
+        margin-top: 10px;
+    }
+
   }
 
-  @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+    
     .card-img-top {         /* custom css rule */
         width: 100%!important;
         height: auto!important;
-
     }
+
+}
+
+
+@media only screen and (max-width: 1021px) {
+    
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+}
+    
+        
  
-  }
 
 /*  @media only screen and (max-width: 1365px) {
     .card-img-top {         
@@ -265,7 +305,7 @@ body {
 @media only screen and (max-width: 1365px) {
     .card-img-top {         /* custom css rule */
         width: 100%!important;
-        height: auto!important;
+        max-height: 242px!important;
         object-fit: fill;
     }
 

@@ -4,7 +4,7 @@
 
 <div class="masthead">
     <div class="container">
-        <div class="row g-0">
+        <div class="row g-0 topgame">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ review.title }}</h1>
@@ -52,7 +52,7 @@
                         {% else %}
                         <span><i class="far fa-thumbs-up"></i></span>
                         {% endif %}
-                        {% if review.number_of_likes == 0 or number_of_likes > 1 %}
+                        {% if review.number_of_likes == 0 or review.number_of_likes > 1 %}
                         <span> {{ review.number_of_likes }}<span> Users liked this review</span>
                         {% else %}
                         <span> {{ review.number_of_likes }}<span> User liked this review</span>
