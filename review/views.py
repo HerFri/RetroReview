@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django import forms
 from .models import Game, Review, Comment
 from .forms import CommentForm, GameFilterForm
@@ -105,7 +106,7 @@ class ReviewDetail(View):
             }
         )
 
-class ReviewLike(View):
+class ReviewLike(LoginRequiredMixin, View):
     def post(self, request, game, review):
         review = get_object_or_404(Review, slug=review)
         game= get_object_or_404(Game, slug=game)
