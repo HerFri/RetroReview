@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'pretendo';
-  src: url('../fonts/pretendo.ttf')  format('truetype');
+  src: url(https://res.cloudinary.com/dylj3x8fn/raw/upload/v1698532699/pretendo_ewmylh.ttf);  /*format('truetype'); */
 }
 
 body {
