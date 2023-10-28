@@ -7,11 +7,15 @@
         <div class="row g-0 topgame">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="game-title">{{ review.title }}</h1>
-                <h2 class ="game-title">{{ game.title }} | {{ game.genre }} </h2>
+                <h4 class="game-title">{{ review.title }}</h4>
+                <p class="game-subtitle h6">Written by: {{ review.username }} | {{ review.created_on }}</p></p>
+                <h5 class ="game-title">{{ game.title }} | {{ game.genre }} </h5>
                     <p class="game-subtitle h6">Platform: {{ game.platform }}</p>
-                    <p class="game-subtitle">Developer: {{ game.developer }}</p> <!-- to be edited! -->
+                    <p class="game-subtitle h6">Developer: {{ game.developer }}</p> <!-- to be edited! -->
                     <p class="game-subtitle h6">Year of Release: {{ game.year }}</p>
+                    <p class="game-title">Rating:
+                        <strong class="game-title"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}<span>/5.0</span></strong>
+                    </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
