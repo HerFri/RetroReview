@@ -20,6 +20,7 @@
                 <option value="NES">NES</option>
                 <option value="SNES">SNES</option>
                 <option value="N64">N64</option>
+                <option value="PC">PC</option>
                 <option value="PlayStation">PlayStation</option>
                 <option value="PlayStation2">PlayStation 2</option>
                 <option value="Sega Genesis">Sega Genesis</option>
@@ -91,8 +92,8 @@
                             </div>
                             <div>
                                 <a href="{% url 'game_detail' game.slug %}" class="game-link">   <!-- add game.id? -->
-                                    <h2 class ="card-title">{{ game.title }}</h2>
-                                    <p class="card-text thin">Genre: {{ game.genre }}</p> 
+                                    <h2 class ="card-title">{{ game.title }} | {{ game.genre }} </h2>
+                                    <p class="card-text h6">Platform: {{ game.platform }}</p>
                                     <p class="card-text">Developer: {{ game.developer }}</p> <!-- to be edited! -->
                                     <p class="card-text h6">Year of Release: {{ game.year }}</p>
                                 </a>

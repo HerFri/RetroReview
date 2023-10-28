@@ -5,11 +5,10 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="game-title">{{ game.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="game-subtitle">Genre: {{ game.genre }}</p>
-                <p class="game-subtitle">Developer: {{ game.developer }}</p>
-                <p class="game-subtitle">Year of Release: {{ game.year }}</p>
+                <h2 class ="game-title">{{ game.title }} | {{ game.genre }} </h2>
+                    <p class="game-subtitle h6">Platform: {{ game.platform }}</p>
+                    <p class="game-subtitle">Developer: {{ game.developer }}</p> <!-- to be edited! -->
+                    <p class="game-subtitle h6">Year of Release: {{ game.year }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
