@@ -75,12 +75,14 @@
                     <div class="card mb-4 border border-secondary">
                         <div class="card-body">
                             <div class="image-container card-img-top">
-                                {% if "placeholder" in game.featured_image.url %}
-                                <img class="card-img-top" 
-                                    src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
-                                {% else %}
-                                <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
-                                {% endif %}
+                                <a href="{% url 'game_detail' game.slug %}">
+                                    {% if "placeholder" in game.featured_image.url %}
+                                    <img class="card-img-top" 
+                                        src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
+                                    {% else %}
+                                    <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
+                                    {% endif %}
+                                </a>
                             </div>  
                             <div class="image-flash">                   
                             <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->

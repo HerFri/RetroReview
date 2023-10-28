@@ -71,8 +71,6 @@ body {
 
 .image-container {
     position: relative;
-    
-/*    max-width: 20%; */
 }
 
 .image-flash {
@@ -153,12 +151,12 @@ body {
     color: #E84610;
 }
 
-.post-title {
-    margin-top: 20%;
+.game-title {
+    margin-top: 5%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.game-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
@@ -234,11 +232,11 @@ body {
         justify-content: center;
         align-items: center;
     }
-    .post-title {
+    .game-title {
         font-size: 16px;
     }
 
-    .post-subtitle {
+    .game-subtitle {
         font-size: 12px;
     }
 
@@ -258,6 +256,7 @@ body {
         object-fit: fill;
     }
  
+
     form {
         display: flex;
         flex-direction: column;
