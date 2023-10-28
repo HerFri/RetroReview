@@ -135,7 +135,7 @@ class FilterForm(forms.Form):
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
     # Überprüfen, ob der Benutzer ein Administrator ist oder der Autor des Kommentars
-    if request.user.is_superuser or request.user == comment.name:
+    if request.user.is_superuser or request.user == comment.author:
         if request.method == 'POST':
             # Löschlogik hier einfügen
             comment.delete()

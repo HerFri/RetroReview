@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid">
-    <p id="welcome" class="brand black-font">Welcome to RetroReview, your Go-To site for Retro Videogame information and reviews! <br> 
-        Pick a game you want to view or write a review about
-    </p>
+
 <div class="container-fluid">
     <div>
     {% if form.year.value == "" and form.platform.value == "" %}
