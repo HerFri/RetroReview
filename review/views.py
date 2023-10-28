@@ -17,15 +17,6 @@ class GameList(generic.ListView):
     paginate_by = 6
 
 
-class GameReviews(generic.ListView):    # Site, where all Reviews are listed
-    model = Review
-    #slug = Game.slug                      # --> TO BE EDITED!
-    queryset = Review.objects.all()        #(slug=slug)      # filter() #all() # Review.objects.filter(slug=game.title)
-    template_name = 'reviews.html'       #for every game there is a different slug (URL)
-    paginate_by = 6
-
-
-
 class GameDetail(View):   #Früher: ReviewDetail
     
     def get(self, request, slug, *args, **kwargs):

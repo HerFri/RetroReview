@@ -33,17 +33,19 @@
                     <div class="col-md-4 border border-secondary">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="image-container">
-                                    {% if "placeholder" in game.featured_image.url %}
-                                    <img class="card-img-top" 
-                                        src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
-                                    {% else %}
-                                    <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
-                                    {% endif %}
-                                    <br>
-                                    <br>
-                                    <strong class="text-secondary"><i class="far fa-thumbs-up" style="color: red"></i> {{ review.number_of_likes }} </strong>
-                                    <strong class="text-secondary"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}<span>/5</span></strong>
+                                <a class="image-container">
+                                    <a href="{% url 'review_detail' game.slug review.slug %}" class="game-link">
+                                        {% if "placeholder" in game.featured_image.url %}
+                                        <img class="card-img-top" 
+                                            src="https://thenounproject.com/api/private/icons/3674270/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="No image available">
+                                        {% else %}
+                                        <img class="card-img-top" src="{{ game.featured_image.url }}" alt="Game cover image">
+                                        {% endif %}
+                                        <br>
+                                        <br>
+                                        <strong class="text-secondary"><i class="far fa-thumbs-up" style="color: red"></i> {{ review.number_of_likes }} </strong>
+                                        <strong class="text-secondary"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}<span>/5.0</span></strong>
+                                    </a>
                                 </div>
                                 <div>
                                     <a href="{% url 'review_detail' game.slug review.slug %}" class="game-link">   <!-- add game.id? -->
