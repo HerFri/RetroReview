@@ -261,6 +261,10 @@ body {
         object-fit: fill;
     }
  
+    #welcome {
+        font-size: 8px;
+
+    }  
 
     form {
         display: flex;
@@ -279,6 +283,10 @@ body {
         width: 100%!important;
         height: auto!important;
     }
+
+    #welcome {
+        font-size: 12px;
+    }  
 
 }
 
