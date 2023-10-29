@@ -27,17 +27,17 @@ Beside the goal of social interaction and having a place of discourse, this webs
 Strategy addresses user's needs and product objectives. This website's purpose is not to advertise any product or specific videogame or to meet any other commercial agenda. It's purpose is rather to bring together games and people, and the stories that those bring. As the games presented on this website are rather old in comparison no modern games, it is most certain that many games have been played by many users in their childhood, which most likely brings up a lot of nostalgia and memories that are encouraged to be shared on this webpage. Shared memories and good times playing certain games gives great opportunity of telling wholesome stories that other people can read and by any chance can make their day.
 
 ### Scope
-Scope addresses what functions and features are within the scope of this project. In this project, it was aimed at providing a Minimal Viable Product (MVP) that fulfills basic requirements for CRUD functionality, such as user sign up and login and the ability to write comments and like reviews for authenticated users. Based on this MVP, improvements and additional features, such as the ability for authenticated users to write their own reviews, can be implemented in the future for additional functionality (See Section [Future Features]()).
+Scope addresses what functions and features are within the scope of this project. In this project, it was aimed at providing a Minimal Viable Product (MVP) that fulfills basic requirements for CRUD functionality, such as user sign up and login and the ability to write comments and like reviews for authenticated users. Based on this MVP, improvements and additional features, such as the ability for authenticated users to write their own reviews, can be implemented in the future for additional functionality (See Section [Future Features](#future features)).
 
 ### Structure
 Structure defines how the functions and features of a website fit together to provide a positive UX. The structure and features of this website are very simple and intuitive and is based on a simple blog website, which serves its purpose for presenting different games and reviews and the resulting discussions in form of comments very well.The need for authentification of new users and the obligatory approval of new comments ensures that RetroReview stays a venue solely for discussing video games and stories that are connected to retro gaming.
 
 ### Skeleton
-Skeleton deals with the more abstract structure of the website like the design of different interface elements and the arrangement of these to provide positive UX. A typical representation for the skeleton of a website are [Wireframes](), which shall be presented for this website at a later time. For intuitive navigation through the website, both the navigation bar and the presentation of the main content follow a well known standard layout pattern, so even not every day internet users will have no problems in finding the right sections of the website. The navigation bar provides links for Signing Up and Logging and a Home button that lead users back to the homepage.
+Skeleton deals with the more abstract structure of the website like the design of different interface elements and the arrangement of these to provide positive UX. A typical representation for the skeleton of a website are [Wireframes](#wireframes), which shall be presented for this website at a later time. For intuitive navigation through the website, both the navigation bar and the presentation of the main content follow a well known standard layout pattern, so even not every day internet users will have no problems in finding the right sections of the website. The navigation bar provides links for Signing Up and Logging and a Home button that lead users back to the homepage.
 Beside the just mentioned Home button, the brand logo serves also as a button that leads users to the homepage. On medium and small devices the navigation bar is replaced by a burger menu to provide clarity. The main content is presented in a list view of game cards which link to the game details page where the reviews are displayed. On this page, users can choose a review they want to read. On the review detail page, authenticated users will observe the actual review, a comment form, a like button and comments, if any were written. Buttons and links are appropriately named. Moreover, a footer with social media icons, which link to the homepages of respective social media sites (except the YouTube icon, which leads to the YouTube channel of the builder of the website), is present on every page of the website. 
 
 ### Surface
-Surface deals with the superficial aspects of the website such as visual design and the overall look to create specific emotional reactions or trigger specific behaviours. For more details about the surface layer planning of this website see [Visual Design](). 
+Surface deals with the superficial aspects of the website such as visual design and the overall look to create specific emotional reactions or trigger specific behaviours. For more details about the surface layer planning of this website see [Visual Design](#visual-design). 
 
 ## Wireframes
 For the planning of the website skeleton I created some wireframes using the wireframe software [Balsamiq](https://balsamiq.com/). These wireframes are an overly simplified sketch of the final website and merely served the purtpose of displaying most of the website's essential features:
@@ -45,12 +45,19 @@ For the planning of the website skeleton I created some wireframes using the wir
 <details>
     <summary>
         Wireframe Images
+    </summary>
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe1.png?raw=true" alt="Index">
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe2.png?raw=true" alt="Game Detail">
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe3.png?raw=true" alt="Review Detail">
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe4.png?raw=true" alt="Sign In">
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe5.png?raw=true" alt="Sign Out">
 </details>
+
+## Visual Design
+The visual design of the website is kept minimalistic so the games and reviews are in the main focus. The main theme for the colors of the website is white and red.
+
+The gradient used for the header and footer sections are made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color. The main color for the body font is black (#000000). The font color for highlighted text is (#f00303)
+ The logo of the website 
 
 
 
