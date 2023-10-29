@@ -54,12 +54,17 @@ For the planning of the website skeleton I created some wireframes using the wir
 </details>
 
 ## Visual Design
-The visual design of the website is kept minimalistic so the games and reviews are in the main focus. The main theme for the colors of the website is white and red.
+The visual design of the website is kept minimalistic so the games and reviews are in the main focus. The main theme for the colors of the website is white/light-grey and red.
 
-The gradient used for the header and footer sections are made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color. The main color for the body font is black (#000000). The font color for highlighted text is (#f00303)
- The logo of the website 
+The gradient used for the header and footer sections are made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color. The main color for the body font is black (#000000). The font color for highlighted text is (#f00303). The color for the like button and when hovering over the game links is (#E84610). The subtitles for the review detail page have lightgrey(#d3d3d3) color. The sign in and sign out buttons have a red color (#f00303).
 
+The filling of the website logo consists of red color (#E84610) and black(#000000) outline. The same style is applied to some elements of the comment section:
+![title](https://github.com/HerFri/RetroReview/blob/main/readmeimages/title.PNG?raw=true)
+![comment]()
 
+The social media icons are from [Fontawesome](https://fontawesome.com/) and have white(#ffffff) filling and black(#000000) outline. All of the social media icons, except the YouTube icon, have a blue (#0d6efd) minus-element in the right corner , that signifies that these social media icons only lead to the homepage of these websites and to no actual social media site. 
+
+![colorpalette]()
 
 ## Agile Approach
 This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/11) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
