@@ -1,9 +1,15 @@
 # RetroReview
-Visit the live page [here]()
+![title]()
+RetroReview is a Retro videogame review website made with Django, where website users can explore and search for videogames in the game catalogue, read reviews, like them and discuss them by writing comments. To be able to like and write comments, users have to register and log into their account. Once logged in, users are able to write, edit and delete their comments and can like and also unlike reviews again. After submitting a comment, this comment will wait for approval by the administrator of the website. Nonetheless, unauthenticated website visitors are able to view the game catalogue and read the respective reviews. The content of the website, i.e. the presented games and reviews, are managed by the administrator of the website, who can add games and reviews and approve, edit and delete comments. Enjoy a little travel back in time and let the nostalgia flow through you!
+
+![mockup]()
+
+Visit the live page [here](https://retro-review-a5a97966a295.herokuapp.com/)
+
 
 
  
-![mockup]()
+
 
 The mockup image has been generated on [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
 
