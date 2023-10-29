@@ -45,11 +45,11 @@ For the planning of the website skeleton I created some wireframes using the wir
 <details>
     <summary>
         Wireframe Images
-    <img src="" alt="Index">
-    <img src="" alt="Index">
-    <img src="" alt="Index">
-    <img src="" alt="Index">
-    <img src="" alt="Index">
+    <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe1.png?raw=true" alt="Index">
+    <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe2.png?raw=true" alt="Game Detail">
+    <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe3.png?raw=true" alt="Review Detail">
+    <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe4.png?raw=true" alt="Sign In">
+    <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe5.png?raw=true" alt="Sign Out">
 </details>
 
 
