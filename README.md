@@ -40,6 +40,17 @@ Beside the just mentioned Home button, the brand logo serves also as a button th
 Surface deals with the superficial aspects of the website such as visual design and the overall look to create specific emotional reactions or trigger specific behaviours. For more details about the surface layer planning of this website see [Visual Design](). 
 
 ## Wireframes
+For the planning of the website skeleton I created some wireframes using the wireframe software [Balsamiq](https://balsamiq.com/). These wireframes are an overly simplified sketch of the final website and merely served the purtpose of displaying most of the website's essential features:
+
+<details>
+    <summary>
+        Wireframe Images
+    <img src="" alt="Index">
+    <img src="" alt="Index">
+    <img src="" alt="Index">
+    <img src="" alt="Index">
+    <img src="" alt="Index">
+</details>
 
 
 
