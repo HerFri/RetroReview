@@ -248,10 +248,13 @@ body {
         font-size: 12px;
     }
 
-    #welcome {
-        font-size: 14px;
-
+    .welcome {
+        font-size: 8px;
     }    
+
+    .log-in-user {
+        font-size: 12px;
+    }
   }
 
   @media only screen and (max-width: 470px) {
@@ -260,9 +263,13 @@ body {
         height: auto!important;
         object-fit: fill;
     }
- 
-    #welcome {
-        font-size: 8px;
+    
+    .log-in-user {
+        font-size: 14px;
+    }
+
+    .welcome {
+        font-size: 16px;
 
     }  
 
@@ -284,8 +291,8 @@ body {
         height: auto!important;
     }
 
-    #welcome {
-        font-size: 12px;
+    .welcome {
+        font-size: 18px;
     }  
 
 }
