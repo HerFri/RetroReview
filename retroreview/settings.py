@@ -28,9 +28,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['retro-review.herokuapp.com',
                   'localhost','retro-review-a5a97966a295.herokuapp.com',

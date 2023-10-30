@@ -11,9 +11,9 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in game.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img class="max-width" src="https://thenounproject.com/api/private/icons/3674270/edit/?" alt="placeholder-img">
                 {% else %}
-                <img src=" {{ game.featured_image.url }}" width="100%">
+                <img class="max-width" src=" {{ game.featured_image.url }}" alt="placeholder-img">
                 {% endif %}
             </div>
         </div>

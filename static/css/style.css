@@ -142,6 +142,10 @@ body {
     z-index: 100;
 }
 
+.max-with {
+    max-width: 100%;
+}
+
 .navbar {
     background: rgb(252,249,249);
     background: linear-gradient(0deg, rgba(252,249,249,1) 0%, rgba(240,3,3,1) 100%);

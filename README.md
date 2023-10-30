@@ -246,6 +246,11 @@ For extensive instructions on how to manually test this site and its User Storie
 ### HTML [W3C validator](https://validator.w3.org/)
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
 
+**Home page**
+
+No errors or warnings to show.
+
+
 
 ## Code Validation
 The website has been tested with the W3C Validator and Jigsaw Validator 
@@ -420,14 +425,27 @@ Changes made to a cloned repository will affect the original one.
 - Extensive reviews written by [ChatGPT](https://openai.com/chatgpt)
 
 ## Media
-Images:
-[]()
-
+# Images:
+- [Mario Kart 64](https://static.wikia.nocookie.net/game-pedia/images/0/03/Mario_Kart_64_Cover.jpg/revision/latest?cb=20220805172925&path-prefix=de)
+- [Half-Life](https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg)
+- [Super Mario 64](https://mario.wiki.gallery/images/thumb/3/3e/Super_Mario_64_Boxart.png/1200px-Super_Mario_64_Boxart.png)
+- [Wario Land 2](https://m.media-amazon.com/images/I/61F9JTGK7NL._AC_UF1000,1000_QL80_.jpg)
+- [Metal Gear Solid](https://images2.medimops.eu/product/dbddab/M0B001105698-source.jpg)
+- [Kingdom Hearts](https://mangabox.net/wp-content/uploads/2021/01/108123_Product.jpg)
+- [Super Mario Bros](https://image.konsolenkost.de/item/images/1111729/full/nes-super-mario-bros-1-neu.jpg)
+- [Streets of Rage](https://m.media-amazon.com/images/I/71jdWLSdY7L.jpg)
+- [Fable](https://cdn.mobygames.com/covers/4183487-fable-xbox-front-cover.jpg)
+- [Warioland](https://static.wikia.nocookie.net/mario/images/9/96/Sml3.jpg/revision/latest/scale-to-width-down/1200?cb=20110228204149&path-prefix=de)
+- [Earthbound](https://upload.wikimedia.org/wikipedia/en/1/1f/EarthBound_Box.jpg)
+- [Legend of the Mystical Ninja](https://static.wikia.nocookie.net/castlevania/images/1/10/The_Legend_of_the_Mystical_Ninja_-_%28NA%29_-_01.jpg/revision/latest?cb=20171013200633)
+- [Placeholder-Image](https://thenounproject.com/api/private/icons/3674270/edit/?)
 
 All media was used for educational purposes only.
 
 ## Code 
-
+* [Bootstrap CSS](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [Font Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
 
 # Acknowledgements
 I want to thank the Slack community and the tutors of Code Institute for their very helpful support and valuable criticism!
