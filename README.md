@@ -297,7 +297,7 @@ Testing layout and appearance of the site for consistency throughout browsers.
 
 ## Performance, Accessibility, Best Practices, SEO
 The Lighthouse Chrome DevTools Performance test showed good results:
-![lighthouse]()
+![lighthouse](https://github.com/HerFri/RetroReview/blob/main/readmeimages/lighthouse.PNG?raw=true)
 
 ## Manual Testing
 For an extensive guide on how to manually test this site and its user stories please refer to this [Testing Guide](testing.md)
