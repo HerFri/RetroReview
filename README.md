@@ -6,7 +6,10 @@ RetroReview is a Retro videogame review website made with Django, where website 
 ![mockup](https://github.com/HerFri/RetroReview/blob/main/readmeimages/mockup.PNG?raw=true)
 The mockup image has been generated on [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
 
+# Agile Approach
+This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/11) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
 
+To view all User Stories including their required Acceptance Criterias and Tasks, please refer to the Kanban board linked above. 
 
 Visit the live page [here](https://retro-review-a5a97966a295.herokuapp.com/)
 
@@ -53,50 +56,132 @@ For the planning of the website skeleton I created some wireframes using the wir
     <img src="https://github.com/HerFri/RetroReview/blob/main/readmeimages/wireframe5.png?raw=true" alt="Sign Out">
 </details>
 
-## Visual Design
-The visual design of the website is kept minimalistic so the games and reviews are in the main focus. The main theme for the colors of the website is white/light-grey and red.
+# Visual Design
+## Color Scheme
+The visual design of the website is kept minimalistic so the games and reviews are in the main focus. The main theme for the colors of the website is white/light-grey, red and orange:
+![colorpalette](https://github.com/HerFri/RetroReview/blob/main/readmeimages/coolors.PNG?raw=true)
 
-The gradient used for the header and footer sections are made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color. The main color for the body font is black (#000000). The font color for highlighted text is (#f00303). The color for the like button and when hovering over the game links is (#E84610). The subtitles for the review detail page have lightgrey(#d3d3d3) color. The sign in and sign out buttons have a red color (#f00303).
+
+The gradient used for the header and footer sections is made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color:
+![gradient]()
+
+The main color for the body font is black (#000000). The font color for highlighted text is (#f00303). The color for the like button and when hovering over the game links is (#E84610). The subtitles for the review detail page have lightgrey(#d3d3d3) color. The sign in and sign out buttons have a red color (#f00303).
 
 The filling of the website logo consists of red color (#E84610) and black(#000000) outline. The same style is applied to some elements of the comment section:
 ![title](https://github.com/HerFri/RetroReview/blob/main/readmeimages/title.PNG?raw=true)
 ![comment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/comment.PNG?raw=true)
 
-The social media icons are from [Fontawesome](https://fontawesome.com/) and have white(#ffffff) filling and black(#000000) outline. All of the social media icons, except the YouTube icon, have a blue (#0d6efd) minus-element in the right corner , that signifies that these social media icons only lead to the homepage of these websites and to no actual social media site. 
+The social media icons are from [Fontawesome](https://fontawesome.com/) and have white(#ffffff) filling and black(#000000) outline. All of the social media icons, except the YouTube icon, have a small blue (#0d6efd) minus-element in the right corner , that signifies that these social media icons only lead to the homepage of these websites and to no actual social media site. 
 
-![colorpalette]()
+## Further Visual Effects
+While hovering over on of the Navigation Link elements, this element will light up in black, while the rest stays transparent behind the gradient:
+![hover]()
 
-# Fonts
+## Fonts
+For the website logo, the navigation bar elements, the footer text and some text of the comment section, a font called 'Pretendo' that was downloaded from [this page](https://fontmeme.com/schriftarten/pretendo-schriftart/), was used. It is similar to the font of the logo that the gaming company 'Nintendo' uses and hints to it to provide a feeling of nostalgia and familiarity:
+![title](https://github.com/HerFri/RetroReview/blob/main/readmeimages/title.PNG?raw=true)
+![comment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/comment.PNG?raw=true)
+![footer]()
 
-## Agile Approach
-This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/11) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
+The rest of the body uses the familiar font Arial.
 
-To view all User Stories including their required Acceptance Criterias and Tasks, please refer to to project linked above. 
+## Favicon 
+A custom favicon was generated on [this page]() that depicts the two beginning R characters form the logo of 'RetroReview':
+![favicon]()
+
+# Features
+
+## Implemented Features
+
+### All pages
+
+### Navigation
+
+- Navbar with clickable website logo, leading to the homepage, and links to the different pages
+![navbar]()
+- Different links visible for authenticated and unauthenticated users
+- Textfield that states that user is logged in
+![hover]()
+![difflinks]()
+
+- Collapsible burger menu with drop-down on small to medium screens
+![burgermenu]()
+
+### Footer
+- Footer with info about the author of the website and clickable social media icons that are linked to the homepages of social media websites and YouTube Channel of the author
+![footer]()
+
+### Home Page
+
+### Welcome Text
+- Welcome text at the top of home page that greets site visitors
+- Explains what it is about and informs about the opportunity to sign up to use all functionalities of the website 
+
+- Welcome text varies if user is logged in or not
+Not logged in:
+![welcomenolog]()
+Logged in:
+![welcomelog]()
+
+### Dropdown Filter Lists (Search for Games)
+- Users can use the dropdown filter lists to filter games by platform and year and click on the search button to be lead to the filtered games page
+![dropdownfilter]()
+
+### Featured Games
+- A selection of featured games is displayed, every game has its own card
+- Users can click on the game image or description to be lead to the game details page
+![gameselection]()
+
+### Next Page Button
+Since the home page is paginated by 6, the button leads to the next page, showing the rest of the games
+![nextpage]()
+
+### Filtered Games Page
+- When users used the dropdown filter lists to filter the games by a specific platform or/and year and clicked the search button, they will be redirected to the Filtered Game Page, where the search criteria is highlighted in red:
+![filterresults]()
+
+### Game Detail Page
+- By clicking on a game image or the game info text, users will be directed to the Game Detail Page
+- In the header area, users will find a banner with information about the game and a picture of the cover
+- Beneath the banner, users will find for each written review a review card, that shows the cover of the reviewed game, the likes, rating, title and author of the review and the date and time the review was written
+![gamedetailpage]()
+
+### Review Detail Page
+- By clicking on the image or title of a review card, users will be directed to the Review Detail Page, were, similar to the Game Detail Page, a banner can be found on the top of the page, showing the title, author, date, time and rating of the review, such as some information about the game.
+![reviewdetailbanner]()
+- Under the banner, the actual review is displayed, with a thumbs up icon on the bottom depicting the number of likes other authenticated users gave this review.
+![review]()
+
+### Comment Section
+Depending, whether the user is logged in or not, he or she will have a different view of the comment section.
+- Not logged in users view:
+![commentsnotlog]()
+- Logged in users view:
+![commentlog]()
+- Logged in users will find a comment form which informs them as which user they are commenting. Moreover, users who already wrote a comment will find an edit and delete button that can be clicked to be directed to a different page, were they can edit or delete their comment
+- Logged in users are able to like the review, whereas not logged in users can not. By clicking the thumbs up like button, the page reloads, the thumbs up icon is filled completely orange and the number of likes increments. Logged in users can also unlike that button again:
+![nolike]()
+![liked]()
+
+### Edit Comment
+When clicked on the edit button, logged in users can edit and modify their comments and submit the changes by clicking the submit button:
+![editcomment]()
+
+### Delete Comment
+When clicked on the delete button, logged in users can delete their comments by clicking the delete button:
+![deletecomment]()
+
+# Logout Page
+By clicking the 'Logout' element in the navbar, logged in users can sign out by clicking the 'sign out' button
+
+
+### Alerts
+
  
 
-+ Wireframes
 
 
-# User Experience
-## User Stories
-* As a user, I want 
 
-# Design
-## Colors
-For the color theme I chose 
-
-![colorpalette]()
-
-The colorpalette above has been generated with [coolors.co]()
-
-For the social network icons in the footer, these colors have been used:
-* Facebook: 
-* Instagram: 
-* YouTube: 
-## Fonts
-As for the fonts, I imported fonts, namely
-* 
-The 'Pretendo'-font is being used for 
 
 # Structure
 ## Wireframes
