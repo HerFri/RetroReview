@@ -22,4 +22,3 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('review.urls'), name='review_urls'),
 ]
-

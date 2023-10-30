@@ -172,19 +172,19 @@ When clicked on the delete button, logged in users can delete their comments by 
 
 ### Sign Up Page
 By clicking the "Sign Up" element in the nav bar, users can sign up by creating an account. Users have to provide a username and a password, a e-mail address is optional.
-![signup]()
+![signup](https://github.com/HerFri/RetroReview/blob/main/readmeimages/signup.PNG?raw=true)
 
 ### Login Page 
 By clicking the 'Login' element in the navbar, users can sign in by clicking the 'sign in' button. Users that have not created an account yet are informed that they can do that by clicking the 'here' word that is highlighted in red, which directs them to the Sign Up page.
-![signin]()
+![signin](https://github.com/HerFri/RetroReview/blob/main/readmeimages/signin.PNG?raw=true)
 
 ### Logout Page
 By clicking the 'Logout' element in the navbar, logged in users can sign out by clicking the 'sign out' button
-![signout]()
+![signout](https://github.com/HerFri/RetroReview/blob/main/readmeimages/signout.PNG?raw=true)
 
 ### Alerts
 When users log in or out, an alert is displayed on the top of the page and users are redirected to the home page.
-![signoutalert]()
+![signoutalert](https://github.com/HerFri/RetroReview/blob/main/readmeimages/signoutalert.png?raw=true)
  
 ## Future Features
 - Authenticated users can add games and reviews on their own
@@ -194,7 +194,7 @@ When users log in or out, an alert is displayed on the top of the page and users
 
 ## Database Model
 The database model diagram was designed using [Lucidchart](lucid.app).
-![erd]()
+![erd](https://github.com/HerFri/RetroReview/blob/main/readmeimages/erd.PNG?raw=true)
 
 ## Custom Model
 
@@ -246,27 +246,30 @@ For extensive instructions on how to manually test this site and its User Storie
 ### HTML [W3C validator](https://validator.w3.org/)
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
 
-**Home page**
+**All pages**
 
-No errors or warnings to show.
+All pages show no errors. Only one warning and Info:
+![warning]()
 
 
+### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
+ No errors found.
 
-## Code Validation
-The website has been tested with the W3C Validator and Jigsaw Validator 
-* The W3C Validator test passed with no errors. [Test here]()
-* The Jigsaw Validator test passed with no errors. [Test here]()
+ ![cssvalid]()
 
-## Performance Test
-To test the performance of the website the Google Lighthouse test was used and showed good results:
-![googlelighthouseresult]()
 
-## Responsiveness
-To test responsiveness, I used the website [AmIresponsive]() that generated the [mockup image]() and showed that my website was responsive on different devices.
-Moreover, I used Chrome (Version ) Developer Tools to simulate viewports of different devices, which showed that my website was fully responsive:
-![galaxyfoldvw]()
-![iphone6vw]()
-![ipadairvw]()
+### Javascript [JSHint](https://jshint.com/)
+
+![jshint]()
+1 undefinedvariable: bootstrap. No action required as this is a custom bootstrap variable and did not need to be defined inside the script
+
+### Python [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Only files with custom written python code have been verified with the above validator. All files wwere adjusted to have no error, except for 
+settings.py, where lines were to long but could not be broken:
+
+![pylint]()
+
 
 ### Browser Testing
 
@@ -424,8 +427,8 @@ Changes made to a cloned repository will affect the original one.
 ## Contents
 - Extensive reviews written by [ChatGPT](https://openai.com/chatgpt)
 
-## Media
-# Images:
+# Media
+## Images:
 - [Mario Kart 64](https://static.wikia.nocookie.net/game-pedia/images/0/03/Mario_Kart_64_Cover.jpg/revision/latest?cb=20220805172925&path-prefix=de)
 - [Half-Life](https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Cover_Art.jpg)
 - [Super Mario 64](https://mario.wiki.gallery/images/thumb/3/3e/Super_Mario_64_Boxart.png/1200px-Super_Mario_64_Boxart.png)
