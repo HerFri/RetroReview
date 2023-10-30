@@ -1,4 +1,4 @@
-
+# Testing Guide
 
 ## Navigation
 
@@ -95,12 +95,12 @@ Allows users to sign out of existing accounts (authenticated users only).
 
 ## Liking
 
-Option to like/unlike posts (authenticated users only).
+Option to like/unlike reviews (authenticated users only).
 
 | Feature | Action                             | Expected Result                 |
 | :-----: | :---------------------------------:| :------------------------------:|
 | **Like** | In the review detail page, click the like button (thumb up icon) below the text of a review that isn't already liked. | Icon fills color to orange. Like count is incremented by 1. |
-| **Unlike** | In the post detail view, click the like button (thumb up icon) below the text of a review that is already liked. | Icon goes back to without orange filling. Like count is decremented by 1. |
+| **Unlike** | In the review detail view, click the like button (thumb up icon) below the text of a review that is already liked. | Icon goes back to without orange filling. Like count is decremented by 1. |
 
 ## Social Links
 

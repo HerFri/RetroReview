@@ -86,7 +86,7 @@ For the website logo, the navigation bar elements, the footer text and some text
 The rest of the body uses the familiar font Arial.
 
 ## Favicon 
-A custom favicon was generated on [this page]() that depicts the two beginning R characters form the logo of 'RetroReview':
+A custom favicon was generated on [this page](https://favicon.io/favicon-converter/) that depicts the two beginning R characters form the logo of 'RetroReview':
 ![favicon](https://github.com/HerFri/RetroReview/blob/main/readmeimages/favicon.png?raw=true)
 
 # Features
@@ -238,9 +238,7 @@ The CRUD principle was the main part of the design process for this project. For
 ## Database
 - [ElephantSQL](https://www.elephantsql.com/) (PostgreSQL Database Hosting)
 
-# Testing
-## Test Guie
-For extensive instructions on how to manually test this site and its User Stories, please refer to these [Testing Instructions]()
+
 
 ## Validator Testing
 ### HTML [W3C validator](https://validator.w3.org/)
@@ -249,26 +247,26 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 **All pages**
 
 All pages show no errors. Only one warning and Info:
-![warning]()
+![warning](https://github.com/HerFri/RetroReview/blob/main/readmeimages/warning.PNG?raw=true)
 
 
 ### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
  No errors found.
 
- ![cssvalid]()
+ ![cssvalid](https://github.com/HerFri/RetroReview/blob/main/readmeimages/cssvalid.PNG?raw=true)
 
 
 ### Javascript [JSHint](https://jshint.com/)
 
-![jshint]()
+![jshint](https://github.com/HerFri/RetroReview/blob/main/readmeimages/jshint.PNG?raw=true)
 1 undefinedvariable: bootstrap. No action required as this is a custom bootstrap variable and did not need to be defined inside the script
 
 ### Python [CI Python Linter](https://pep8ci.herokuapp.com/)
 
-Only files with custom written python code have been verified with the above validator. All files wwere adjusted to have no error, except for 
+Only files with custom written python code have been verified with the above validator. All files were adjusted to have no error, except for 
 settings.py, where lines were to long but could not be broken:
 
-![pylint]()
+![pylint](https://github.com/HerFri/RetroReview/blob/main/readmeimages/pylinter.PNG?raw=true)
 
 
 ### Browser Testing
@@ -297,26 +295,23 @@ Testing layout and appearance of the site for consistency throughout browsers.
 | Firefox     | ✔          | ✔             |
 | IE          |deprecated by Microsoft, not tested|
 
+## Performance, Accessibility, Best Practices, SEO
+The Lighthouse Chrome DevTools Performance test showed good results:
+![lighthouse]()
+
 ## Manual Testing
-
-
-| Feature         | Expect                                                          | Action                    | Result                                          |   
-|-----------------|-----------------------------------------------------------------|---------------------------|-------------------------------------------------|
-| 
-
-
+For an extensive guide on how to manually test this site and its user stories please refer to this [Testing Guide](testing.md)
 
 ## Fixed Bugs
 
 When an authenticated site user would click the like button on a review page, the browser would throw a HTTP ERROR 405.
-![bug]()
+![bug](https://github.com/HerFri/RetroReview/blob/main/readmeimages/405bug.PNG?raw=true)
 
 The reason for this issue was that not sufficient arguments have been passed to and inside the
 `like`-function of the `ReviewLike`-class. More precisely, the `slug`-arguments were not correct and some were missing, so
 I added the correct arguments `slug=review`, `slug=game` and `args=[game.slug, review.slug]`.
 
-![fixclass]()
-![fixcode]()
+![fixcode](https://github.com/HerFri/RetroReview/blob/main/readmeimages/BugFix.PNG?raw=true)
 
 ## Deployment
 
