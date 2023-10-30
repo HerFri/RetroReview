@@ -25,7 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
-
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
@@ -33,10 +32,10 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['retro-review.herokuapp.com',
-                  'localhost','retro-review-a5a97966a295.herokuapp.com',
-                  '127.0.0.1',
-                  ]
-
+                 'localhost',
+                 'retro-review-a5a97966a295.herokuapp.com',
+                 '127.0.0.1',
+                 ]
 
 
 INSTALLED_APPS = [
@@ -108,10 +107,10 @@ DATABASES = {
 }
 
 
-
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -125,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -135,7 +133,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 STATIC_URL = '/static/'

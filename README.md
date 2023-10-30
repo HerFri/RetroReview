@@ -5,6 +5,7 @@ RetroReview is a Retro videogame review website made with Django, where website 
 
 ![mockup](https://github.com/HerFri/RetroReview/blob/main/readmeimages/mockup.PNG?raw=true)
 The mockup image has been generated on [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
+
 Visit the live page [here](https://retro-review-a5a97966a295.herokuapp.com/)
 
 # Agile Approach
@@ -220,7 +221,7 @@ The CRUD principle was the main part of the design process for this project. For
 - [GitHub](https://github.com/HerFri) (Version Control)
 - [Visual Studio Code](https://code.visualstudio.com/) (IDE)
 - [Heroku](https://dashboard.heroku.com/apps) (Site Hosting)
-- [Cloudinary](Serving static media files)
+- [Cloudinary](https://cloudinary.com/) (Serving static media files)
 - [ChatGPT](https://openai.com/chatgpt) (Help understanding and fixing bugs)
 
 ## Python Libraries
