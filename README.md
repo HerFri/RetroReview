@@ -5,13 +5,13 @@ RetroReview is a Retro videogame review website made with Django, where website 
 
 ![mockup](https://github.com/HerFri/RetroReview/blob/main/readmeimages/mockup.PNG?raw=true)
 The mockup image has been generated on [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
+Visit the live page [here](https://retro-review-a5a97966a295.herokuapp.com/)
 
 # Agile Approach
 This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/11) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
 
 To view all User Stories including their required Acceptance Criterias and Tasks, please refer to the Kanban board linked above. 
 
-Visit the live page [here](https://retro-review-a5a97966a295.herokuapp.com/)
 
 # UI/UX
 The overall design of the website is kept minimalistic and intuitive, so that site visitors don't get distracted or overwhelmed by unnecessary features. 
@@ -63,7 +63,7 @@ The visual design of the website is kept minimalistic so the games and reviews a
 
 
 The gradient used for the header and footer sections is made on [cssgradient.io/](https://cssgradient.io/) and begins with a red color (#f00303) which leads to a white/light-grey color (#fcf9f9), which is also the main background color:
-![gradient]()
+![gradient](https://github.com/HerFri/RetroReview/blob/main/readmeimages/gradient.PNG?raw=true)
 
 The main color for the body font is black (#000000). The font color for highlighted text is (#f00303). The color for the like button and when hovering over the game links is (#E84610). The subtitles for the review detail page have lightgrey(#d3d3d3) color. The sign in and sign out buttons have a red color (#f00303).
 
@@ -75,19 +75,19 @@ The social media icons are from [Fontawesome](https://fontawesome.com/) and have
 
 ## Further Visual Effects
 While hovering over on of the Navigation Link elements, this element will light up in black, while the rest stays transparent behind the gradient:
-![hover]()
+![hover](https://github.com/HerFri/RetroReview/blob/main/readmeimages/hover.png?raw=true)
 
 ## Fonts
 For the website logo, the navigation bar elements, the footer text and some text of the comment section, a font called 'Pretendo' that was downloaded from [this page](https://fontmeme.com/schriftarten/pretendo-schriftart/), was used. It is similar to the font of the logo that the gaming company 'Nintendo' uses and hints to it to provide a feeling of nostalgia and familiarity:
 ![title](https://github.com/HerFri/RetroReview/blob/main/readmeimages/title.PNG?raw=true)
 ![comment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/comment.PNG?raw=true)
-![footer]()
+![footer](https://github.com/HerFri/RetroReview/blob/main/readmeimages/footer.PNG?raw=true)
 
 The rest of the body uses the familiar font Arial.
 
 ## Favicon 
 A custom favicon was generated on [this page]() that depicts the two beginning R characters form the logo of 'RetroReview':
-![favicon]()
+![favicon](https://github.com/HerFri/RetroReview/blob/main/readmeimages/favicon.png?raw=true)
 
 # Features
 
@@ -98,18 +98,17 @@ A custom favicon was generated on [this page]() that depicts the two beginning R
 ### Navigation
 
 - Navbar with clickable website logo, leading to the homepage, and links to the different pages
-![navbar]()
+![navbar](https://github.com/HerFri/RetroReview/blob/main/readmeimages/hover.png?raw=true)
 - Different links visible for authenticated and unauthenticated users
 - Textfield that states that user is logged in
-![hover]()
-![difflinks]()
+![difflinks](https://github.com/HerFri/RetroReview/blob/main/readmeimages/difflinks.PNG?raw=true)
 
 - Collapsible burger menu with drop-down on small to medium screens
-![burgermenu]()
+![burgermenu](https://github.com/HerFri/RetroReview/blob/main/readmeimages/burgermenu.PNG?raw=true)
 
 ### Footer
 - Footer with info about the author of the website and clickable social media icons that are linked to the homepages of social media websites and YouTube Channel of the author
-![footer]()
+![footer](https://github.com/HerFri/RetroReview/blob/main/readmeimages/footer.PNG?raw=true)
 
 ### Home Page
 
@@ -119,59 +118,63 @@ A custom favicon was generated on [this page]() that depicts the two beginning R
 
 - Welcome text varies if user is logged in or not
 Not logged in:
-![welcomenolog]()
+![welcomenolog](https://github.com/HerFri/RetroReview/blob/main/readmeimages/welcomenolog.PNG?raw=true)
 Logged in:
-![welcomelog]()
+![welcomelog](https://github.com/HerFri/RetroReview/blob/main/readmeimages/welcomelog.PNG?raw=true)
 
 ### Dropdown Filter Lists (Search for Games)
 - Users can use the dropdown filter lists to filter games by platform and year and click on the search button to be lead to the filtered games page
-![dropdownfilter]()
+![dropdownfilter](https://github.com/HerFri/RetroReview/blob/main/readmeimages/dropdownfilter.png?raw=true)
 
 ### Featured Games
 - A selection of featured games is displayed, every game has its own card
 - Users can click on the game image or description to be lead to the game details page
-![gameselection]()
+![gameselection](https://github.com/HerFri/RetroReview/blob/main/readmeimages/gameselection.PNG?raw=true)
 
 ### Next Page Button
 Since the home page is paginated by 6, the button leads to the next page, showing the rest of the games
-![nextpage]()
+![nextpage](https://github.com/HerFri/RetroReview/blob/main/readmeimages/nextpage.PNG?raw=true)
 
 ### Filtered Games Page
 - When users used the dropdown filter lists to filter the games by a specific platform or/and year and clicked the search button, they will be redirected to the Filtered Game Page, where the search criteria is highlighted in red:
-![filterresults]()
+![filterresults](https://github.com/HerFri/RetroReview/blob/main/readmeimages/filterresults.PNG?raw=true)
 
 ### Game Detail Page
 - By clicking on a game image or the game info text, users will be directed to the Game Detail Page
 - In the header area, users will find a banner with information about the game and a picture of the cover
 - Beneath the banner, users will find for each written review a review card, that shows the cover of the reviewed game, the likes, rating, title and author of the review and the date and time the review was written
-![gamedetailpage]()
+![gamedetailpage](https://github.com/HerFri/RetroReview/blob/main/readmeimages/gamedetail.PNG?raw=true)
 
 ### Review Detail Page
 - By clicking on the image or title of a review card, users will be directed to the Review Detail Page, were, similar to the Game Detail Page, a banner can be found on the top of the page, showing the title, author, date, time and rating of the review, such as some information about the game.
-![reviewdetailbanner]()
+![reviewdetailbanner](https://github.com/HerFri/RetroReview/blob/main/readmeimages/reviewdetailbanner.PNG?raw=true)
 - Under the banner, the actual review is displayed, with a thumbs up icon on the bottom depicting the number of likes other authenticated users gave this review.
-![review]()
+![review](https://github.com/HerFri/RetroReview/blob/main/readmeimages/review.PNG?raw=true)
 
 ### Comment Section
 Depending, whether the user is logged in or not, he or she will have a different view of the comment section.
 - Not logged in users view:
-![commentsnotlog]()
+![commentsnotlog](https://github.com/HerFri/RetroReview/blob/main/readmeimages/commentsnolog.PNG?raw=true)
 - Logged in users view:
-![commentlog]()
+![commentlog](https://github.com/HerFri/RetroReview/blob/main/readmeimages/commentlog.PNG?raw=true)
 - Logged in users will find a comment form which informs them as which user they are commenting. Moreover, users who already wrote a comment will find an edit and delete button that can be clicked to be directed to a different page, were they can edit or delete their comment
 - Logged in users are able to like the review, whereas not logged in users can not. By clicking the thumbs up like button, the page reloads, the thumbs up icon is filled completely orange and the number of likes increments. Logged in users can also unlike that button again:
-![nolike]()
-![liked]()
+![nolike](https://github.com/HerFri/RetroReview/blob/main/readmeimages/nolike.PNG?raw=true)
+![liked](https://github.com/HerFri/RetroReview/blob/main/readmeimages/liked.PNG?raw=true)
 
 ### Edit Comment
 When clicked on the edit button, logged in users can edit and modify their comments and submit the changes by clicking the submit button:
-![editcomment]()
+![editcomment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/editcomment.PNG?raw=true)
 
 ### Delete Comment
 When clicked on the delete button, logged in users can delete their comments by clicking the delete button:
-![deletecomment]()
+![deletecomment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/deletecomment.PNG?raw=true)
 
-# Logout Page
+### Login Page 
+By clicking the 'Login' element in the navbar, users can sign in by clicking the 'sign in' button. Users that have not created an account yet are informed that they can do that by clicking the 'here' word that is highlighted in red, which direct them to the Sign Up page.
+![signin]()
+
+### Logout Page
 By clicking the 'Logout' element in the navbar, logged in users can sign out by clicking the 'sign out' button
 
 
