@@ -34,7 +34,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse flex-grow-0" id="navbarText">
-                <ul class="navbar-nav ms-auto brand"> <!-- deleted from class: me-auto mb-2 mb-lg-0 -->
+                <ul class="navbar-nav ms-auto brand"> 
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -51,10 +51,6 @@
                     </li>
                     {% endif %}
                 </ul>
-            <!--    <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span> -->
-            </div>
             <span class="whitespace"></span>
             {% if user.is_authenticated %}
             <div>
@@ -82,9 +78,9 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg"> <!-- main class="col-md-12 col-lg-12 min-vh-100 main-bg maincontent ) " -->
+    <main class="flex-shrink-0 main-bg"> 
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Content -->
         {% endblock content %}
     </main>
 

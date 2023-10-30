@@ -4,14 +4,12 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h2 class ="game-title">{{ game.title }} | {{ game.genre }} </h2>
                     <p class="game-title">Platform: {{ game.platform }}</p>
-                    <p class="game-title">Developer: {{ game.developer }}</p> <!-- to be edited! -->
+                    <p class="game-title">Developer: {{ game.developer }}</p> 
                     <p class="game-title">Year of Release: {{ game.year }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in game.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
@@ -48,27 +46,20 @@
                                         <strong class="text-secondary"><i class="far fa-star style" style="color: goldenrod"></i>{{ review.rating }}<span>/5.0</span></strong>
                                 </div>
                                 <div>
-                                    <a href="{% url 'review_detail' game.slug review.slug %}" class="game-link">   <!-- add game.id? -->
+                                    <a href="{% url 'review_detail' game.slug review.slug %}" class="game-link">   
                                         <h2 class ="card-title">{{ review.title }}</h2>
                                     </a>
                                 </div>
-                                <div class="col-3">
-                                    <!-- The number of likes goes before the closing strong tag -->
-                                    
-                                </div>
-                                
+                                <div class="col-3">                                    
+                                </div>                                
                                 <div class="image-flash">                   
-                                    <p class="author">Review by: {{ review.username }}</p>  <!-- class from walktrough, see style.css -->
+                                    <p class="author">Review by: {{ review.username }}</p>
                                 </div>
                                 <div>
                                     <p class="card-text">
                                         Date: {{ review.created_on }}
                                     </p>
                                 </div>
-                            
-                               <!-- <p class="card-text">{{ review.content }}</p> --> <!-- to be edited! -->
-                            <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
-                            
                             </div>
                         </div>
                     </div>

@@ -14,9 +14,9 @@
         {% endif %}
     </div>
 <div class="row">
-    <!-- ab hier filter_games-->
     <div class="text-center mt-5">
         <div class="justify-content-center">
+            <!-- Filter form -->
         <form method="get" action="{% url 'filter_games' %}">
             <label for="id_platform">Platform:</label>
             <select id="id_platform" name="platform">
@@ -76,7 +76,7 @@
     </div>
 </div>
 
-        <!-- Games Entries Column -->
+        <!-- Game Entries -->
         <div class="col-12 mt-3 left">
             <div class="row">
             {% for game in game_list %}
@@ -94,16 +94,14 @@
                                 </a>
                             </div>  
                             <div class="image-flash">                   
-                            <!--    <p class="author">{{ game.title }}</p> -->  <!-- class from walktrough, see style.css -->
                             </div>
                             <div>
-                                <a href="{% url 'game_detail' game.slug %}" class="game-link">   <!-- add game.id? -->
+                                <a href="{% url 'game_detail' game.slug %}" class="game-link">   
                                     <h2 class ="card-title">{{ game.title }} | {{ game.genre }} </h2>
                                     <p class="card-text h6">Platform: {{ game.platform }}</p>
-                                    <p class="card-text">Developer: {{ game.developer }}</p> <!-- to be edited! -->
+                                    <p class="card-text">Developer: {{ game.developer }}</p> 
                                     <p class="card-text h6">Year of Release: {{ game.year }}</p>
                                 </a>
-                            <!--  <i class="far fa-star"></i>{{ game.rating }} --> <!-- to be edited! --> 
                             </div> 
                             <hr />
                         </div>

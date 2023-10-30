@@ -171,7 +171,8 @@ When clicked on the delete button, logged in users can delete their comments by 
 ![deletecomment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/deletecomment.PNG?raw=true)
 
 ### Sign Up Page
-By clicking the "Sign Up" element in the nav bar, users can sign up by creating an account. Users have to provide a username 
+By clicking the "Sign Up" element in the nav bar, users can sign up by creating an account. Users have to provide a username and a password, a e-mail address is optional.
+![signup]()
 
 ### Login Page 
 By clicking the 'Login' element in the navbar, users can sign in by clicking the 'sign in' button. Users that have not created an account yet are informed that they can do that by clicking the 'here' word that is highlighted in red, which directs them to the Sign Up page.
@@ -179,62 +180,73 @@ By clicking the 'Login' element in the navbar, users can sign in by clicking the
 
 ### Logout Page
 By clicking the 'Logout' element in the navbar, logged in users can sign out by clicking the 'sign out' button
-
+![signout]()
 
 ### Alerts
-
+When users log in or out, an alert is displayed on the top of the page and users are redirected to the home page.
+![signoutalert]()
  
+## Future Features
+- Authenticated users can add games and reviews on their own
+- Authenticated users can rate games in their reviews, contributing to the average rating of a game
 
+# Database Design 
 
+## Database Model
+The database model diagram was designed using [Lucidchart](lucid.app).
+![erd]()
 
+## Custom Model
 
+The project consists of the three models. The Comment and Review model are based on the Code Institute Walktrough project "I Think Therefore I Blog". As required by the assessment criteria for this project, the Game model is a custom model.
 
-# Structure
-## Wireframes
-For the structural planning of my website, I created some wireframes using the wireframe software [Balsamiq](https://balsamiq.com/).
+# CRUD
 
+The CRUD principle was the main part of the design process for this project. For a detailed description of all CRUD features see [Features](#features).
 
-* [Desktop wireframe of index page]()
-* [Desktop wireframe of  page]()
-* [Mobile view wireframe of index page]()
-* [Mobile view wireframe of ]()
+**Create:** An authenticated user can create and submmit a comment.
 
+**Read:** A user can read his/her own and other users' comments.
 
-# Features
+**Update:** An authenticated user can edit and update his/her own comments.
 
-## Navigation Bar
-The navigation bar is located under the hero image and allows by clicking on one of the navigation elements navigation to the desired section of the website. 
-![navbar1]()
-
-## Landing Page
-The Landing Page consists of 
-![landingpage]()
-
-
-## Footer
-The footer comprises four clickable icons for the social networks Facebook, Instagram, Twitter and YouTube. By clicking the icons, a new tab is opened which leads the user to the respective social network.
-The icon designs are imported from [Font Awesome](https://fontawesome.com/).
-
-![footer]()
-
-
-# Future features
-
-
-# Accessibility ?
-For good accessibility `<aria-label>` and `alt`-attributes have been added to elements like links and images that do not provide sufficient information to support assistive technologies like screenreaders.
+**Delete:** An authenticated user can delete his/her own submitted comments.
 
 # Technologies Used
-Following technologies have been used for building my website:
+## Work Environments and Hosting
 
-* HTML
-* CSS
-* Python
-* GitHub
-* GitHub Pages
-* Visual Studio Code
+- [Balsamiq](https://balsamiq.com/) (Wireframes)
+- [Lucid Chart](lucid.app)  (ERD Diagrams)
+- [GitHub](https://github.com/HerFri) (Version Control)
+- [Visual Studio Code](https://code.visualstudio.com/) (IDE)
+- [Heroku](https://dashboard.heroku.com/apps) (Site Hosting)
+- [Cloudinary](Serving static media files)
+- [ChatGPT](https://openai.com/chatgpt) (Help understanding and fixing bugs)
+
+## Python Libraries
+- [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/) (Python HTTP server for WSGI applications)
+- [pyscopg2](https://pypi.org/project/psycopg2/) (PostgreSQL Database adapter)
+
+## Django Libraries
+- [Djanjo-Allauth](https://docs.allauth.org/en/latest/) (User Authentication)
+- [Django-Crispy-Forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behavior of Django forms)
+
+## External Libraries and Applications
+- [Bootstrap Vers. 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/) (HTML & CSS Framework)
+- [Summernote](https://summernote.org/) (WYSIWYG editor)
+
+## Database
+- [ElephantSQL](https://www.elephantsql.com/) (PostgreSQL Database Hosting)
 
 # Testing
+## Test Guie
+For extensive instructions on how to manually test this site and its User Stories, please refer to these [Testing Instructions]()
+
+## Validator Testing
+### HTML [W3C validator](https://validator.w3.org/)
+As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
+
+
 ## Code Validation
 The website has been tested with the W3C Validator and Jigsaw Validator 
 * The W3C Validator test passed with no errors. [Test here]()
@@ -251,28 +263,40 @@ Moreover, I used Chrome (Version ) Developer Tools to simulate viewports of diff
 ![iphone6vw]()
 ![ipadairvw]()
 
-## Browser Testing
+### Browser Testing
 
-I tested the layout and appearance of my website for consistency on different browsers.
-Moreover, I tested if the navigation, all links, form submission and video works on different browser. 
+**Layout:** 
+Testing layout and appearance of the site for consistency throughout browsers.
 
-Tested browser: Chrome (Version 114.0.5735.199), Firefox, Safari, Edge
+**Functionality:** 
+- Testing complete functionality of the site. This includes:
+    - Sign Up
+    - Login
+    - Logout
+    - External social media links
+    - Navigation
+    - Like/unlike entries
+    - Comment/extend entries
+    - Delete and edit entries
+    - Admin user functions
+    
+- Ensuring all links, navigation, and form submit functions as expected throughout browsers.
 
-Result: Layout and all functions work throughout the tested browsers.
+| Browser     | Layout      | Functionality |
+| :---------: | :----------:| :-----------: |
+| Chrome      | ✔          | ✔             |
+| Edge        | ✔          | ✔             |
+| Firefox     | ✔          | ✔             |
+| IE          |deprecated by Microsoft, not tested|
 
 ## Manual Testing
+
 
 | Feature         | Expect                                                          | Action                    | Result                                          |   
 |-----------------|-----------------------------------------------------------------|---------------------------|-------------------------------------------------|
 | 
 
 
-## Testing User Stories
-
-| Expectation                                                                                        | Result                                                                                                                                                                                                                                   |
-|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| As a user, I want                                                                                       |
-| As a user, I want | 
 
 ## Fixed Bugs
 
@@ -286,12 +310,114 @@ I added the correct arguments `slug=review`, `slug=game` and `args=[game.slug, r
 ![fixclass]()
 ![fixcode]()
 
-# Deployment
+## Deployment
+
+This project was deployed using [Heroku](https://heroku.com/), [Cloudinary](https://cloudinary.com/) and [ElephantSQL](https://www.elephantsql.com/). For a full list of libraries refer to [Technologies Used](#technologies-used).
+
+#### Installing libraries
+
+The following steps outline all libraries needed for successful deployment on Heroku. All neccessary-requirements and settings updates will not be discussed in this section as they are assumed as logical follow-up steps to installments. For a full explanation of how to install these libraries, refer to the links provided in [Technologies Used](#technologies-used).
+
+- Install **Gunicorn** (server used to run Django on Heroku): ``pip3 install django gunicorn``
+- Install **pyscopg2** (connects to PostgreSQL): ``pip 3 install dj_database_url pyscopg2``
+- Install **Cloudinary** (host static files and images): ``pip3 install dj3-Cloudinary-storage``
+
+
+#### Creating the Heroku App
+
+- Log into Heroku and go to the Dashboard
+- Click **New** and select **Create new app** from the drop-down
+- Name the app appropriately and choose the relevant region, then click **Create App**
+
+#### Create a PostgreSQL database using ElephantSQL
+
+This is necessary to create a database that can be accessed by Heroku. The database provided by Django can not be accessed by the deployed Heroku app.
+
+- Log into ElephantSQL and go to Dashboard
+- Click **Create New Instance**
+- Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+- Click **Select Region** and choose appropriate Datacenter
+- Click **Review**, check all details and click **Create Instance**
+- Return to Dashboard on click on the name of the newly created instance
+- Copy the database URL from the details section
+
+#### Hiding sensitive information
+
+- Create ``env.py`` file and ensure it is included in the ``.gitignore`` file
+- Add ``import os`` to env.py file and set environment variable **DATABASE_URL** to the URL copied from ElephantSQL (``os.environ["DATABASE_URL"]="<copiedURL>"``)
+- Below, set **SECRET_KEY** variable (``os.environ["SECRET_KEY"]="mysecretkey"``, but be more inventive about the key string!)
+
+
+#### Update Settings
+
+- Add the following code at the top of ``settings.py`` to connect the Django project to env.py:
+    ````
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+          import env
+    ````
+- Remove the insecure secret key provided by Django in settings.py and refer to a variable in env.py instead (``SECRET_KEY = os.environ.get('SECRET_KEY')``)
+
+- To connect to the new database, replace the provided **DATABASE** variable with 
+    ````
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+    ````
+- Save and migrate all changes made
+
+#### Connecting Heroku to Database
+
+- In the Heroku dashboard, go to **Settings** tab
+- Add new config vars **CLOUDINARY_URL** (value is CLOUDINARY_URL), **DATABASE_URL** (value is database URL), **HEROKU_HOSTNAME** (value is Heroku app), **SECRET_KEY** (value is secret key string) and **PORT** (value "8000")
+
+#### Connect to Cloudinary
+
+- In the Cloudinary dashboard, copy **API Environment variable**
+- In ``env.py`` file, add new variable ``os.environ["CLOUDINARY_URL"] = "<copied_variable"`` and remove ``CLOUDINARY_URL=`` from the variable string
+- Add same variable value as new Heroku config var named **CLOUDINARY_URL**
+- In ``settings.py``, in ``INSTALLED_APPS`` list, above ``django.contrib.staticfiles`` add ``cloudinary_storage``, below add ``cloudinary``
+- To define Cloudinary as static file storage add the following to settings.py
+    ````
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ````
+
+#### Allow Heroku as host
+
+- In ``settings.py`` add
+    ````
+    ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+    ````
+
+## Development
+
+The following options are available to work with this code or run in a local environment.
+
+### Clone
+
+Changes made to a cloned repository will affect the original one.
+
+- Navigate to the main page of the repository (this could be a forked instance)
+- Click on the **Code** dropdown menu above the list of files
+- Choose a method to copy the URL for the repository: either via **HTTPS**, by using an **SSH key**, or by using **GitHub CLI**
+- In your work environment, open Git Bash and change the current directory to the target location for the cloned repository
+- Type ``git clone`` followed by the copied URL and press enter **Enter**
+
+### Download as ZIP
+
+- Log into GitHub and click on the repository to download ([RetroReview
+](https://github.com/HerFri/RetroReview))
+- Select **Code** and click "Download Zip" file
+- Once the download is completed, extract the ZIP file and use it in your local environment
+
 
 # Credits
 
 ## Contents
-
+- Extensive reviews written by [ChatGPT](https://openai.com/chatgpt)
 
 ## Media
 Images:

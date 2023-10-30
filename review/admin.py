@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Game, Review, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
 @admin.register(Review)
 class ReviewAdmin (SummernoteModelAdmin):
     
@@ -18,16 +17,15 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'review', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('username', 'email', 'body')
-    actions = ['approve_comments']                      #
-                                                        #   
-    def approve_comments(self, request, queryset):      # needed in project?
-        queryset.update(approved=True)                  #
+    actions = ['approve_comments']                      
+                                                        
+    def approve_comments(self, request, queryset):      
+        queryset.update(approved=True)                  
 
-#admin.site.register(Game)
+
 
 @admin.register(Game)
 class GameAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'genre', 'year', 'platform',)
     search_fields = ['title', 'game', 'gerne', 'year', 'platform',]
     prepopulated_fields = {'slug': ('title',)}
- #   list_filter = ('created_on',)

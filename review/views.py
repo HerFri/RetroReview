@@ -10,42 +10,37 @@ from .years import YEARS
 from .platforms import PLATFORMS
 
 
-# Create your views here.
 
 class GameList(generic.ListView):
+    """
+    Renders all objects of Game model as list
+    """
     model = Game
-    queryset = Game.objects.all()   # .order_by('-rating')
+    queryset = Game.objects.all()   
     template_name = 'index.html'
     paginate_by = 6
 
 
-class GameDetail(View):   #Früher: ReviewDetail
+class GameDetail(View):   
     
     def get(self, request, slug, *args, **kwargs):
-        #review = Review,
-        queryset = Review.objects.filter(status=1)     #  
+        queryset = Review.objects.filter(status=1)       
         game = get_object_or_404(Game, slug=slug)
-        reviews = game.review_set.filter(status=1).order_by('-created_on') # Get all reviews related to the game
-        #comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
+        reviews = game.review_set.filter(status=1).order_by('-created_on') 
         liked = False
         if request.user.is_authenticated:
             if reviews.filter(likes=request.user).exists():
                 liked = True
-        #if review.likes.filter(id=self.request.user.id).exists():
-        #    liked = True
+
+
 
         return render(
             request,
             "game_detail.html",
             {   
                 "game": game,
-                "reviews": reviews,     # Pass the reviews related to the game to the context
-                #"comments": comments,
-                #"commented": True,
+                "reviews": reviews,     
                 "liked": liked,
-                #"review_form": ReviewForm()
-
-                #"comment_form": CommentForm(),
             },
         )
     
@@ -54,8 +49,7 @@ class ReviewDetail(View):
         queryset = Review.objects.filter(status=1)
         game = get_object_or_404(Game, slug=game)
         review = get_object_or_404(queryset, slug=review)
-        #reviews = game.review_set.filter(status=1).order_by('-created_on') # Get all reviews related to the game
-        comments = review.comments.filter(approved=True).order_by('created_on') # in walktrough: comments.filter(approved=True).order_by
+        comments = review.comments.filter(approved=True).order_by('created_on')
         liked = False
         if review.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -108,6 +102,9 @@ class ReviewDetail(View):
         )
 
 class ReviewLike(LoginRequiredMixin, View):
+    """
+    Allows authenticated users to like or unlike a review
+    """
     def post(self, request, game, review):
         review = get_object_or_404(Review, slug=review)
         game= get_object_or_404(Game, slug=game)
@@ -117,9 +114,12 @@ class ReviewLike(LoginRequiredMixin, View):
         else:
             review.likes.add(request.user)
         return HttpResponseRedirect(reverse('review_detail', args=[game.slug, review.slug]))
-        #return redirect('review_detail', game=review.game.slug, review=review.slug)
+    
 @login_required        
 def edit_comment(request, comment_id):
+    """
+    Allows authenticated users to edit a comment
+    """
     comment = get_object_or_404(Comment, pk=comment_id, author=request.user)
     if request.method == "POST":
         form = CommentForm(request.POST, instance=comment)
@@ -134,24 +134,27 @@ def edit_comment(request, comment_id):
 
 @login_required
 def delete_comment(request, comment_id):
+    """
+    Allows authenticated users to delete a comment
+    """
     if (request.user.is_superuser):
         comment = get_object_or_404(Comment, pk=comment_id)
     else:
         comment = get_object_or_404(Comment, pk=comment_id, author=request.user)
-    # Überprüfen, ob der Benutzer ein Administrator ist oder der Autor des Kommentars
     if request.user.is_superuser or request.user == comment.author:
         if request.method == 'POST':
-            # Löschlogik hier einfügen
             comment.delete()
             return redirect('review_detail', game = comment.review.game.slug, review=comment.review.slug,)
         return render(request, 'delete_comment.html', {'comment': comment})
     else:
-        # Hier können Sie eine Weiterleitung oder eine Fehlermeldung hinzufügen
+
         return redirect('review_detail', review_id=comment.review.id)
     
 def filter_games(request):
-    games = Game.objects.all()  # Alle Beiträge
-    # Formular verarbeiten, um Filteroptionen zu erhalten
+    """
+    Allows users to filter games
+    """
+    games = Game.objects.all()  
     form = GameFilterForm(request.GET)
     if form.is_valid():
         platform = form.cleaned_data.get("platform")
@@ -161,11 +164,3 @@ def filter_games(request):
         if year:
             games = games.filter(year=year)
     return render(request, "filtered_games.html", {"games": games, "form": form})
-
-#def filter_games(request):
-#    if request.method == "POST":
-#        year = request.POST.get('year')
-#        platform = request.POST.get('platform')
-#        games = Game.objects.filter(year=year, platform=platform)
-#        return render(request, 'filtered_games.html', {'games': games,})
-#    return render(request, 'index.html', {'years': YEARS, 'platforms': PLATFORMS})
