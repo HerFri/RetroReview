@@ -120,7 +120,7 @@ class ReviewLike(LoginRequiredMixin, View):
         #return redirect('review_detail', game=review.game.slug, review=review.slug)
 @login_required        
 def edit_comment(request, comment_id):
-    comment = get_object_or_404(Comment, pk=comment_id, username=request.user)
+    comment = get_object_or_404(Comment, pk=comment_id, author=request.user)
     if request.method == "POST":
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
@@ -137,7 +137,7 @@ def delete_comment(request, comment_id):
     if (request.user.is_superuser):
         comment = get_object_or_404(Comment, pk=comment_id)
     else:
-        comment = get_object_or_404(Comment, pk=comment_id, username = request.user)
+        comment = get_object_or_404(Comment, pk=comment_id, author = request.user)
     # Überprüfen, ob der Benutzer ein Administrator ist oder der Autor des Kommentars
     if request.user.is_superuser or request.user == comment.author:
         if request.method == 'POST':
