@@ -170,8 +170,11 @@ When clicked on the edit button, logged in users can edit and modify their comme
 When clicked on the delete button, logged in users can delete their comments by clicking the delete button:
 ![deletecomment](https://github.com/HerFri/RetroReview/blob/main/readmeimages/deletecomment.PNG?raw=true)
 
+### Sign Up Page
+By clicking the "Sign Up" element in the nav bar, users can sign up by creating an account. Users have to provide a username 
+
 ### Login Page 
-By clicking the 'Login' element in the navbar, users can sign in by clicking the 'sign in' button. Users that have not created an account yet are informed that they can do that by clicking the 'here' word that is highlighted in red, which direct them to the Sign Up page.
+By clicking the 'Login' element in the navbar, users can sign in by clicking the 'sign in' button. Users that have not created an account yet are informed that they can do that by clicking the 'here' word that is highlighted in red, which directs them to the Sign Up page.
 ![signin]()
 
 ### Logout Page
